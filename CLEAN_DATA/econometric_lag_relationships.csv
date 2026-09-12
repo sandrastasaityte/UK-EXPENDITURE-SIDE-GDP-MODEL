@@ -1,0 +1,5 @@
+Lagged_Variable,Correlation_With_Current_GDP_Growth,Observations
+GDP_Growth_Lag1,-0.20970735659592146,9
+Domestic_Demand_Growth_Lag1,-0.11311802399908441,9
+Investment_Growth_Lag1,-0.0004126171330942993,9
+Interest_Rate_Change_Lag1,0.0401151527431603,9

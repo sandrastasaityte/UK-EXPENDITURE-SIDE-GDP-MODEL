@@ -1,0 +1,102 @@
+
+UK EXPENDITURE-SIDE GDP MODEL
+PHASE 08 — AUTOMATED ECONOMIST REPORT
+============================================================
+
+Report date: 2026-09-12
+Latest observation: 2025
+
+IMPORTANT DATA NOTE
+-------------------
+The current project uses an illustrative/test dataset.
+The numerical results below demonstrate the analytical framework
+and should not be presented as official UK economic statistics.
+
+
+1. EXECUTIVE SUMMARY
+--------------------
+Economic activity expanded by 1.40% in 2025, indicating moderate growth.
+
+Domestic demand grew by 1.81%, outperforming headline GDP growth and providing a positive domestic contribution to activity.
+
+Investment growth was 2.27%, while household consumption grew by 1.59%.
+
+The external sector remained in deficit, with net exports at -20.00 in the model dataset.
+
+The model classifies the latest macroeconomic regime as 'EXPANSION WITH EASING'.
+
+
+2. CURRENT ECONOMIC POSITION
+----------------------------
+Latest GDP growth was 1.40%, indicating moderate economic expansion. The current GDP regime is 'EXPANSION' and momentum is classified as 'STABLE'.
+
+
+3. GDP GROWTH AND BUSINESS CYCLE
+---------------------------------
+Latest GDP growth was 1.40%, indicating moderate economic expansion. The current GDP regime is 'EXPANSION' and momentum is classified as 'STABLE'.
+
+
+4. GDP GROWTH DECOMPOSITION
+---------------------------
+Growth contribution data are unavailable.
+
+
+5. EXPENDITURE COMPONENTS
+-------------------------
+Consumption: increased by 1.59%. Investment: increased by 2.27%. Government demand: increased by 1.96%. Exports: increased by 2.86%. Imports: increased by 1.33%.
+
+
+6. DOMESTIC DEMAND
+------------------
+Domestic demand grew by 1.81% in the latest observation. The domestic demand regime is classified as 'EXPANSION', with momentum assessed as 'N/A'.
+
+
+7. EXTERNAL SECTOR
+------------------
+The economy recorded a net export deficit of 20.00. Export/import coverage was 0.95%. The external-sector regime is classified as 'NET EXPORT DEFICIT'.
+
+
+8. MONETARY AND FINANCIAL CONDITIONS
+------------------------------------
+The policy rate is 4.00%. Interest-rate direction is classified as 'EASING'. Financial conditions are classified as 'STRONG EASING'. The model FX rate is 1.16, with FX momentum classified as 'DEPRECIATION'.
+
+
+9. ECONOMETRIC EVIDENCE
+-----------------------
+The econometric analysis uses 11 observations and is classified as 'UNKNOWN'. These relationships should be treated as exploratory rather than causal because the sample is very small and expenditure components are mechanically linked to GDP through the national accounts identity.
+
+
+10. FORECAST SCENARIOS
+----------------------
+The scenario analysis produces illustrative projections. BASELINE: final projected GDP growth 2.05%. OPTIMISTIC: final projected GDP growth 2.80%. DOWNSIDE: final projected GDP growth 1.05%. These should not be interpreted as high-confidence forecasts.
+
+
+11. ECONOMIC RISKS
+------------------
+- External sector: MEDIUM — Net exports remain negative.
+
+
+12. DATA QUALITY AND LIMITATIONS
+--------------------------------
+The analysis contains 11 observations. The current dataset is an illustrative/test dataset rather than an official ONS UK national accounts dataset. Consequently, numerical findings should be treated as demonstrations of the analytical framework rather than estimates of the actual UK economy. The expenditure identity may also contain residuals because real national accounts can contain statistical discrepancies and chain-volume measures may not be strictly additive. Econometric results are particularly sensitive to the very small sample and should not be interpreted as causal evidence.
+
+
+13. ECONOMIST CONCLUSION
+------------------------
+The model provides a structured expenditure-side framework for
+monitoring UK economic activity. The appropriate interpretation is
+based on the interaction between GDP growth, domestic demand,
+individual expenditure components, the external sector and financial
+conditions.
+
+The framework is designed to support repeated updates as new data
+become available. Before the model is used for real economic
+forecasting or policy analysis, the illustrative dataset should be
+replaced with official UK national accounts and financial-market data,
+with the relevant ONS definitions and methodological adjustments
+applied.
+
+
+============================================================
+END OF AUTOMATED ECONOMIST REPORT
+============================================================

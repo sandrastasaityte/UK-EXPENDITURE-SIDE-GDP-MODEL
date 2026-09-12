@@ -1,0 +1,7 @@
+Risk_Category,Score,Risk_Level,Indicator,Unit,Interpretation
+GDP Growth,1,LOW,1.4018691588784993,%,Positive GDP growth
+Domestic Demand,1,LOW,1.8099547511312153,%,Domestic demand expanding
+Investment,1,LOW,2.2727272727272707,%,Investment expanding
+Interest Rates,2,MEDIUM,4.0,%,Restrictive interest-rate environment
+FX,1,LOW,-1.6949152542372947,%,Limited FX movement
+External Sector,2,MEDIUM,-20.0,GDP units,Net export deficit

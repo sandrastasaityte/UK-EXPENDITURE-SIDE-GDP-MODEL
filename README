@@ -1,0 +1,73 @@
+UK EXPENDITURE-SIDE GDP MODEL
+│
+├── 01_RAW_DATA
+│   ├── ONS
+│   ├── OECD
+│   ├── Bank of England
+│   └── Exchange-rate / interest-rate data
+│
+├── 02_CLEAN_DATA
+│   ├── Year / Quarter
+│   ├── Y  → GDP
+│   ├── C  → Household consumption
+│   ├── I  → Investment
+│   ├── G  → Government expenditure
+│   ├── X  → Exports
+│   ├── M  → Imports
+│   ├── NX → Net exports
+│   ├── Rate → Interest rate
+│   └── FX → Exchange rate
+│
+├── 03_GDP_IDENTITY
+│   ├── Y = C + I + G + NX
+│   ├── Identity difference
+│   ├── Identity validation
+│   └── Statistical discrepancy
+│
+├── 04_INDICATORS
+│   ├── GDP growth
+│   ├── Component growth
+│   ├── GDP shares
+│   ├── Contribution to GDP growth
+│   ├── Consumption intensity
+│   ├── Investment intensity
+│   ├── Government spending intensity
+│   ├── Net-export position
+│   └── Real vs nominal analysis
+│
+├── 05_ECONOMETRICS
+│   ├── Consumption → Income
+│   ├── Investment → Interest rate
+│   ├── Net exports → FX
+│   ├── Correlations
+│   ├── OLS models
+│   ├── R²
+│   ├── coefficients
+│   └── statistical significance
+│
+├── 06_FORECAST
+│   ├── Baseline
+│   ├── Optimistic
+│   ├── Pessimistic
+│   ├── Fiscal policy
+│   └── Scenario comparison
+│
+├── 07_DASHBOARD
+│   ├── GDP growth
+│   ├── C / I / G / NX
+│   ├── GDP contributions
+│   ├── Business-cycle indicators
+│   ├── Forecast scenarios
+│   └── Risk indicators
+│
+└── 08_REPORT
+    ├── Executive summary
+    ├── GDP performance
+    ├── Domestic demand
+    ├── Investment
+    ├── Government sector
+    ├── External sector
+    ├── Econometric findings
+    ├── Forecast
+    ├── Risks
+    └── Economist conclusion

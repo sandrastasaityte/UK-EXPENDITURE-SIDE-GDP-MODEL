@@ -1,0 +1,28 @@
+UK EXPENDITURE-SIDE GDP FORECAST
+================================================================================
+
+IMPORTANT METHODOLOGICAL WARNING
+The historical dataset contains only 11 observations.
+Forecasts should therefore be interpreted as illustrative scenarios rather than high-confidence statistical predictions.
+
+BASELINE SCENARIO
+--------------------------------------------------------------------------------
+2026: GDP expenditure = 1127.61, growth = 3.93%
+2028: GDP expenditure = 1174.29, growth = 2.05%
+Interpretation: the scenario indicates relatively strong growth.
+
+OPTIMISTIC SCENARIO
+--------------------------------------------------------------------------------
+2026: GDP expenditure = 1135.90, growth = 4.69%
+2028: GDP expenditure = 1200.37, growth = 2.80%
+Interpretation: the scenario indicates relatively strong growth.
+
+DOWNSIDE SCENARIO
+--------------------------------------------------------------------------------
+2026: GDP expenditure = 1116.56, growth = 2.91%
+2028: GDP expenditure = 1140.11, growth = 1.05%
+Interpretation: the scenario indicates moderate economic growth.
+
+ECONOMIC LIMITATION
+The scenarios are based on recent expenditure component growth and are not causal forecasts.
+They should be updated when official UK national accounts data become available.
