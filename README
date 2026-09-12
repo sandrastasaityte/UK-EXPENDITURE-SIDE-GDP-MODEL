@@ -1,73 +1,504 @@
-UK EXPENDITURE-SIDE GDP MODEL
+UK Expenditure-Side GDP Model
+Professional UK Macroeconomic Analysis, Econometrics and Scenario Forecasting
+
+A Python-based macroeconomic modelling framework for analysing UK economic activity through the expenditure approach to GDP.
+
+The project combines national-accounting identities, macroeconomic indicators, econometric analysis, scenario forecasting, interactive dashboards and automated economist-style reporting into a single reproducible analytical workflow.
+
+Project Overview
+
+The expenditure approach expresses GDP as:
+
+[
+Y = C + I + G + (X-M)
+]
+
+Where:
+
+Y = Gross Domestic Product
+C = Household consumption
+I = Investment
+G = Government expenditure
+X = Exports
+M = Imports
+NX = Net exports (X - M)
+
+The model examines how changes in domestic demand, investment, government activity and the external sector contribute to overall economic growth.
+
+The analytical pipeline is:
+
+RAW DATA
+    ↓
+DATA QUALITY CONTROL
+    ↓
+DATA CLEANING
+    ↓
+GDP EXPENDITURE IDENTITY
+    ↓
+MACROECONOMIC INDICATORS
+    ↓
+ECONOMETRICS
+    ↓
+SCENARIO FORECASTING
+    ↓
+RISK DASHBOARD
+    ↓
+ECONOMIST REPORT
+Key Features
+1. Data Quality Control
+
+The project automatically checks:
+
+Required variables
+Missing observations
+Duplicate observations
+Year consistency
+Numeric data types
+Negative values
+Dataset structure
+GDP identity consistency
+2. GDP Expenditure Identity
+
+The model calculates:
+
+Net Exports = Exports - Imports
+
+Domestic Demand = Consumption + Investment + Government
+
+GDP Expenditure = C + I + G + NX
+
+It also calculates:
+
+GDP identity residual
+Absolute residual
+Percentage error
+Identity status
+GDP growth
+Component growth
+Growth contributions
+Business-cycle classifications
+
+The model recognises that official national accounts can contain statistical discrepancies and that chain-volume measures may not always add perfectly.
+
+3. Macroeconomic Indicators
+
+The indicator engine calculates:
+
+GDP
+GDP growth
+Growth momentum
+Growth regime
+Growth strength
+Expenditure Components
+Consumption growth
+Investment growth
+Government expenditure growth
+Export growth
+Import growth
+Net export growth
+Domestic demand growth
+Financial Conditions
+Interest-rate changes
+Monetary tightening/easing
+Financial conditions regime
+Foreign Exchange
+GBP exchange-rate changes
+Appreciation/depreciation
+Rolling FX volatility
+External Sector
+Trade balance
+Trade balance as % of GDP
+Export/import coverage ratio
+External-sector regime
+Volatility
+GDP growth volatility
+Domestic-demand volatility
+Investment volatility
+Macro Regime
+
+The model classifies the economy into regimes such as:
+
+BROAD CONTRACTION
+BROAD EXPANSION
+EXPANSION WITH TIGHTENING
+EXPANSION WITH EASING
+MIXED / TRANSITION
+Econometric Analysis
+
+The project includes an exploratory econometric framework using statsmodels.
+
+It currently provides:
+
+Correlation matrices
+GDP growth correlations
+Lag relationships
+Simple OLS regressions
+Expenditure-component regressions
+Financial-condition regressions
+Regression coefficients
+R-squared
+Adjusted R-squared
+Sample-size diagnostics
+
+Example analytical questions include:
+
+How strongly is GDP growth associated with domestic demand?
+
+How strongly are expenditure components associated with GDP growth?
+
+Are financial conditions associated with GDP growth?
+
+Do previous-period variables show meaningful relationships with current GDP growth?
+Important limitation
+
+The current development dataset contains only a small number of observations.
+
+Therefore:
+
+Econometric results should be interpreted as exploratory relationships rather than causal estimates.
+
+Correlation does not establish causation, and the current sample is not sufficiently large for robust structural inference.
+
+The econometric framework is designed to become more useful when the project is populated with longer-frequency official UK data.
+
+Scenario Forecasting
+
+The forecasting module produces three illustrative scenarios:
+
+Baseline
+
+Continuation of recent expenditure-component growth patterns.
+
+Optimistic
+
+Stronger growth across expenditure components.
+
+Downside
+
+Weaker expenditure-component growth.
+
+The model produces:
+
+Forecast GDP
+Forecast GDP growth
+Consumption
+Investment
+Government expenditure
+Exports
+Imports
+Net exports
+
+for multiple future periods.
+
+The scenarios are intended as analytical scenario projections, not high-confidence statistical forecasts.
+
+Dashboard
+
+The project generates an interactive Plotly dashboard containing:
+
+GDP growth
+GDP expenditure components
+Domestic demand
+External sector
+Financial conditions
+Forecast scenarios
+Risk indicators
+GDP identity diagnostics
+
+Main dashboard:
+
+DASHBOARD/economic_dashboard.html
+
+The dashboard can be opened directly in a web browser.
+
+Automated Economist Report
+
+The reporting engine automatically produces a structured economic assessment covering:
+
+Executive Summary
+GDP Assessment
+Expenditure Components
+Growth Contributions
+Domestic Demand
+External Sector
+Financial Conditions
+Econometric Evidence
+Forecast Scenarios
+Risks
+Methodological Limitations
+
+Outputs include:
+
+REPORT/economist_report.txt
+REPORT/economist_report.html
+REPORT/economic_assessment.csv
+REPORT/risk_assessment.csv
+Project Structure
+UK-EXPENDITURE-SIDE-GDP-MODEL/
 │
-├── 01_RAW_DATA
-│   ├── ONS
-│   ├── OECD
-│   ├── Bank of England
-│   └── Exchange-rate / interest-rate data
+├── RAW_DATA/
+│   └── uk_gdp_expenditure.csv
 │
-├── 02_CLEAN_DATA
-│   ├── Year / Quarter
-│   ├── Y  → GDP
-│   ├── C  → Household consumption
-│   ├── I  → Investment
-│   ├── G  → Government expenditure
-│   ├── X  → Exports
-│   ├── M  → Imports
-│   ├── NX → Net exports
-│   ├── Rate → Interest rate
-│   └── FX → Exchange rate
+├── CLEAN_DATA/
 │
-├── 03_GDP_IDENTITY
-│   ├── Y = C + I + G + NX
-│   ├── Identity difference
-│   ├── Identity validation
-│   └── Statistical discrepancy
+├── GDP_IDENTITY/
+│   ├── gdp_identity_analysis.csv
+│   └── uk_gdp_professional_dataset.csv
 │
-├── 04_INDICATORS
-│   ├── GDP growth
-│   ├── Component growth
-│   ├── GDP shares
-│   ├── Contribution to GDP growth
-│   ├── Consumption intensity
-│   ├── Investment intensity
-│   ├── Government spending intensity
-│   ├── Net-export position
-│   └── Real vs nominal analysis
+├── INDICATORS/
+│   └── macro_indicators.csv
 │
-├── 05_ECONOMETRICS
-│   ├── Consumption → Income
-│   ├── Investment → Interest rate
-│   ├── Net exports → FX
-│   ├── Correlations
-│   ├── OLS models
-│   ├── R²
-│   ├── coefficients
-│   └── statistical significance
+├── ECONOMETRICS/
+│   ├── correlation_matrix.csv
+│   ├── gdp_growth_correlations.csv
+│   ├── lag_relationships.csv
+│   ├── regression_summary.csv
+│   └── regression_coefficients.csv
 │
-├── 06_FORECAST
-│   ├── Baseline
-│   ├── Optimistic
-│   ├── Pessimistic
-│   ├── Fiscal policy
-│   └── Scenario comparison
+├── FORECAST/
+│   ├── forecast_results.csv
+│   ├── forecast_summary.csv
+│   └── forecast_report.txt
 │
-├── 07_DASHBOARD
-│   ├── GDP growth
-│   ├── C / I / G / NX
-│   ├── GDP contributions
-│   ├── Business-cycle indicators
-│   ├── Forecast scenarios
-│   └── Risk indicators
+├── DASHBOARD/
+│   ├── economic_dashboard.html
+│   ├── dashboard_summary.csv
+│   ├── risk_dashboard.csv
+│   ├── gdp_identity_dashboard.csv
+│   └── charts/
 │
-└── 08_REPORT
-    ├── Executive summary
-    ├── GDP performance
-    ├── Domestic demand
-    ├── Investment
-    ├── Government sector
-    ├── External sector
-    ├── Econometric findings
-    ├── Forecast
-    ├── Risks
-    └── Economist conclusion
+├── REPORT/
+│   ├── economist_report.txt
+│   ├── economist_report.html
+│   ├── economic_assessment.csv
+│   └── risk_assessment.csv
+│
+├── SRC/
+│   ├── __init__.py
+│   ├── data_loader.py
+│   ├── data_quality.py
+│   ├── cleaning.py
+│   ├── gdp_identity.py
+│   ├── indicators.py
+│   ├── econometrics.py
+│   ├── forecasting.py
+│   ├── dashboard.py
+│   └── report.py
+│
+├── main.py
+├── requirements.txt
+└── README.md
+Technology Stack
+
+The project is written in Python.
+
+Core Libraries
+Python
+Pandas — data manipulation and analysis
+NumPy — numerical calculations
+Statsmodels — econometric modelling
+Plotly — interactive visualisation
+Development Environment
+PyCharm
+Python virtual environment
+Git
+GitHub
+Installation
+
+Clone the repository:
+
+git clone https://github.com/sandrastasaityte/UK-EXPENDITURE-SIDE-GDP-MODEL.git
+
+Move into the project directory:
+
+cd UK-EXPENDITURE-SIDE-GDP-MODEL
+
+Create a virtual environment:
+
+python -m venv .venv
+
+Activate it on Windows:
+
+.venv\Scripts\activate
+
+Install dependencies:
+
+pip install -r requirements.txt
+Running the Model
+
+Run the complete analytical pipeline:
+
+python main.py
+
+The pipeline automatically runs the major analytical stages:
+
+Phase 01 — Data Loading & Quality Control
+Phase 02 — Data Cleaning
+Phase 03 — GDP Identity Analysis
+Phase 04 — Macroeconomic Indicators
+Phase 05 — Econometrics
+Phase 06 — Forecasting
+Phase 07 — Dashboard
+Phase 08 — Economist Report
+Outputs
+
+After execution, the project produces structured outputs across the analytical stages.
+
+GDP Identity
+GDP_IDENTITY/gdp_identity_analysis.csv
+GDP_IDENTITY/uk_gdp_professional_dataset.csv
+Indicators
+INDICATORS/macro_indicators.csv
+Econometrics
+ECONOMETRICS/correlation_matrix.csv
+ECONOMETRICS/gdp_growth_correlations.csv
+ECONOMETRICS/lag_relationships.csv
+ECONOMETRICS/regression_summary.csv
+ECONOMETRICS/regression_coefficients.csv
+Forecasting
+FORECAST/forecast_results.csv
+FORECAST/forecast_summary.csv
+FORECAST/forecast_report.txt
+Dashboard
+DASHBOARD/economic_dashboard.html
+Report
+REPORT/economist_report.html
+REPORT/economist_report.txt
+Current Data Status
+
+The current repository contains a development/test dataset designed to validate the analytical pipeline.
+
+It should not be interpreted as an official UK national-accounts dataset.
+
+The next research stage is to replace the development data with official UK macroeconomic data from sources such as:
+
+UK Office for National Statistics
+Bank of England
+
+The model architecture is designed so that the analytical pipeline can be rerun after replacing the raw dataset.
+
+Methodological Considerations
+
+Several methodological issues are deliberately incorporated into the project.
+
+GDP Identity
+
+Official national accounts may contain statistical discrepancies, and expenditure components may not sum exactly to published GDP depending on the measurement framework.
+
+The model therefore reports the identity residual rather than silently forcing the identity to balance.
+
+Econometrics
+
+The current test dataset is too small for reliable causal inference.
+
+Regression results should therefore be regarded as exploratory.
+
+Forecasting
+
+The scenario model is based on expenditure-component assumptions and is intended for scenario analysis rather than a fully specified structural macroeconomic forecast.
+
+Data Revisions
+
+Official national-account statistics can be revised.
+
+A production version should therefore record:
+
+Data vintage
+Publication date
+Source
+Frequency
+Units
+Seasonal-adjustment status
+Real/nominal classification
+Future Development
+
+Planned improvements include:
+
+Official UK Data Integration
+
+Replace the artificial development dataset with official ONS and Bank of England data.
+
+Higher-Frequency Analysis
+
+Extend the model from annual observations to:
+
+Quarterly GDP
+Quarterly expenditure components
+Quarterly investment
+Household consumption
+Government consumption
+Exports and imports
+Advanced Econometrics
+
+Potential extensions:
+
+ARDL models
+VAR models
+Vector error-correction models
+Granger causality
+Impulse-response analysis
+Structural break tests
+Unit-root testing
+Cointegration analysis
+Forecasting
+
+Potential extensions:
+
+ARIMA
+SARIMA
+VAR forecasting
+Dynamic regression
+Forecast confidence intervals
+Historical forecast evaluation
+Risk Analysis
+
+Potential additions:
+
+Recession probability
+Financial stress indicators
+Yield-curve indicators
+Inflation shocks
+Interest-rate shocks
+FX shocks
+External-demand scenarios
+Analytical Objective
+
+The ultimate objective is to create a reproducible economist-grade framework that answers:
+
+What is driving UK economic growth, how sustainable is that growth, what risks are emerging, and how could alternative expenditure scenarios affect future GDP?
+
+The project combines:
+
+National Accounting
+        +
+Macroeconomic Indicators
+        +
+Econometrics
+        +
+Scenario Analysis
+        +
+Data Visualisation
+        +
+Economic Interpretation
+
+to create a complete macroeconomic analytical workflow.
+
+Author
+
+Sandra Stasaityte
+
+Economics | Financial Analysis | Treasury | Macroeconomic Modelling | Data Analytics
+
+GitHub:
+
+https://github.com/sandrastasaityte
+
+Project Status
+
+Development framework: Complete
+
+The analytical pipeline from raw data through GDP decomposition, indicators, econometrics, forecasting, dashboarding and reporting is operational.
+
+Research data integration: Next stage
+
+The next major step is integration of official UK macroeconomic data and extension of the model to a longer, preferably quarterly, time series.
